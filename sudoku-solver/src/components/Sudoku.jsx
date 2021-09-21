@@ -48,22 +48,6 @@ const Sudoku = () => {
     <div className={styles.sudoku_container}>
       <div className={styles.sudoku_box}>
         <section className={styles.sudoku}>
-          {/* <Grid container spacing={1} style={{width: "70%" }} alignItems="center">
-                        {
-                            sudo.map(row => (
-                                <Grid container item xs={12} spacing={3} alignItems="center">
-                                    {
-                                        row.map(el => (
-                                            <Grid item  style={{width:"7%",height:"55px"}} alignItems="center">
-                                                <div><b>{el}</b></div>
-                                            </Grid>
-                                        ))
-                                    }
-                                </Grid>
-                            ))
-                        }
-                    </Grid> */}
-
           <table className={styles.sudoku_table}>
             <thead>
               <tr>
@@ -136,15 +120,6 @@ const Sudoku = () => {
                 onInputCapture={(e) => handleInput2(e)}
                 style={{ width: "125px" }}
               />
-              {/* <textarea
-                placeholder="Provide the Sudoku problem matrix here..."
-                name=""
-                ref={(e) => (value.current = e)}
-                onInputCapture={(e) => handleInput2(e)}
-                id=""
-                cols="15"
-                rows="9"
-              ></textarea> */}
             </div>
             <br />
             <div className={styles.sudoku_btn}>
@@ -193,20 +168,7 @@ const Sudoku = () => {
 9 2 8 0 0 0 0 6 0"
               style={{ width: "125px", overflow: "hidden" }}
             />
-            {/* <textarea
-              cols="15"
-              rows="9"
-              ref={(textarea) => (textArea.current = textarea)}
-              value="0 4 0 0 0 0 1 7 9 
-0 0 2 0 0 8 0 5 4 
-0 0 6 0 0 5 0 0 8 
-0 8 0 0 7 0 9 1 0 
-0 5 0 0 9 0 0 3 0 
-0 1 9 0 6 0 0 4 0 
-3 0 0 4 0 0 7 0 0 
-5 7 0 1 0 0 2 0 0 
-9 2 8 0 0 0 0 6 0"
-            /> */}
+
             <div className={styles.cpybtn}>
               {copied ? (
                 <Button variant="contained" color="success">

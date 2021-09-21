@@ -2,8 +2,15 @@ import { useContext } from "react";
 import { SudokuSolverContext } from "../ContextProvider/SudokuContext";
 
 const RemTime = ({ prop }) => {
-  const { solved, interval_id, setErr, setRemTime, setReset, setErrBtn,setSteps } =
-    useContext(SudokuSolverContext);
+  const {
+    solved,
+    interval_id,
+    setErr,
+    setRemTime,
+    setReset,
+    setErrBtn,
+    setSteps,
+  } = useContext(SudokuSolverContext);
   if (prop === 0) {
     clearInterval(interval_id);
     setRemTime("");
@@ -16,12 +23,19 @@ const RemTime = ({ prop }) => {
       setErr("Sudoku cannot be solved! Please click Reset.");
       setReset(false);
       setErrBtn(true);
-      setSteps("Failed!")
+      setSteps("Failed!");
     }
   }
 
   return (
-    <div><b>Time : </b>{Number(prop) > 0 ? <span> {prop}s</span> : "waiting to be initialized..."}</div>
+    <div>
+      <b>Time : </b>
+      {Number(prop) > 0 ? (
+        <span> {prop}s</span>
+      ) : (
+        "waiting to be initialized..."
+      )}
+    </div>
   );
 };
 

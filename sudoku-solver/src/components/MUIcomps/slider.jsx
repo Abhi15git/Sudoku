@@ -5,7 +5,7 @@ import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import Slider from "@mui/material/Slider";
 import MuiInput from "@mui/material/Input";
-import SpeedIcon from '@mui/icons-material/Speed';
+import SpeedIcon from "@mui/icons-material/Speed";
 import { SudokuSolverContext } from "../ContextProvider/SudokuContext";
 
 const Input = styled(MuiInput)`
@@ -13,8 +13,7 @@ const Input = styled(MuiInput)`
 `;
 
 export default function InputSlider() {
-    const {speed,setSpeed} = React.useContext(SudokuSolverContext)
-    
+  const { speed, setSpeed } = React.useContext(SudokuSolverContext);
 
   const handleSliderChange = (event, newValue) => {
     setSpeed(newValue);
